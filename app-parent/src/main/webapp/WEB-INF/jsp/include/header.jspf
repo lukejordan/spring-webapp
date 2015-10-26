@@ -1,0 +1,7 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/primary-style.css">
+	<title>Hello page</title>
+</head>
+<body>	
+	<%@ include file="navigation.jspf" %>
