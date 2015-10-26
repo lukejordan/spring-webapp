@@ -21,6 +21,6 @@ public class Example {
 	      
 	      model.addAttribute("message", "Hello Spring MVC Framework!");
 
-	      return "/view/hello";
+	      return "/home";
 	   }
 }

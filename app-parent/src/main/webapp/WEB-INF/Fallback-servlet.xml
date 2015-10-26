@@ -10,26 +10,25 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-   <context:component-scan base-package="com.lukeyj.example" />
-    <mvc:annotation-driven />
+	<context:component-scan base-package="com.lukeyj.example" />
+	<mvc:annotation-driven />
+	
     <!--  
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
 	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
 
-
-		<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
-   
-   
+   	<mvc:resources mapping="/assets/**" location="/WEB-INF/jsp/assets/" />
 	-->
-	
-   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <property name="prefix" value="/WEB-INF/jsp/" />
-      <property name="suffix" value=".jsp" />
-   </bean>
+
+	 <mvc:resources mapping="/assets/**" location="/assets/" />
+	 <mvc:resources mapping="/**" location="/assets/" />
+	 	 
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
    
    <!--  
-
-
 	<bean id="viewResolver"
 	    class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
@@ -37,4 +36,5 @@
 	    <property name="suffix" value=".jsp"/>
 	</bean>
    -->
+   
 </beans>
