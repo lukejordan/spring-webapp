@@ -2,6 +2,7 @@
    xmlns:context="http://www.springframework.org/schema/context"
    xmlns:mvc="http://www.springframework.org/schema/mvc"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:beans="http://www.springframework.org/schema/beans"
    xsi:schemaLocation="
    http://www.springframework.org/schema/beans     
    http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -11,23 +12,38 @@
    http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:component-scan base-package="com.lukeyj.example" />
+	
 	<mvc:annotation-driven />
 	
     <!--  
+    
+    	
+    	
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
 	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
 
    	<mvc:resources mapping="/assets/**" location="/WEB-INF/jsp/assets/" />
+   		 <mvc:resources mapping="/**" location="/assets/" />
 	-->
 
+
+	
 	 <mvc:resources mapping="/assets/**" location="/assets/" />
-	 <mvc:resources mapping="/**" location="/assets/" />
-	 	 
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+   <beans:bean id="simpleMappingExceptionResolver" class="com.lukeyj.example.MySimpleMappingExceptionResolver">
+        <beans:property name="exceptionMappings">
+            <beans:map>
+                <beans:entry key="Exception" value="generic_error"></beans:entry>
+            </beans:map>
+        </beans:property>
+        <beans:property name="defaultErrorView" value="generic_error"/>
+    </beans:bean>	 
+
+   	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-   
+	
    <!--  
 	<bean id="viewResolver"
 	    class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -35,6 +51,11 @@
 	    <property name="prefix" value="/WEB-INF/jsp/"/>
 	    <property name="suffix" value=".jsp"/>
 	</bean>
+	
+
+	   	   <mvc:default-servlet-handler/>
    -->
+
+   
    
 </beans>

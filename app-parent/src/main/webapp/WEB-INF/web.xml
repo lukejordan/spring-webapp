@@ -22,14 +22,15 @@
       <load-on-startup>1</load-on-startup>
    </servlet>
    
+   <!--  
   	<servlet-mapping>
 		<servlet-name>JSP</servlet-name>
   		<url-pattern>/WEB-INF/jsp/*</url-pattern>
 	</servlet-mapping>
-	
+	-->
    <servlet-mapping>
       <servlet-name>Fallback</servlet-name>
-      <url-pattern>/*</url-pattern>
+      <url-pattern>/</url-pattern>
    </servlet-mapping>
    
    
@@ -62,7 +63,14 @@
       <servlet-name>Fallback</servlet-name>
       <url-pattern>/assets/*</url-pattern>
    </servlet-mapping>
-   -->
-   
- 
+
+
+    -->
+        	<error-page>
+		<error-code>404</error-code>
+		<location>/error404</location>
+	</error-page>
+    
+
+	
 </web-app>
