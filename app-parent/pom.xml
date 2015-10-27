@@ -2,18 +2,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>org.lukeyj</groupId>
 	<artifactId>web-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>webapp</name>
-	
+
 	<properties>
-		<!--
-		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
-		-->
-    	<org.springframework.version>4.2.2.RELEASE</org.springframework.version>
+		<org.springframework.version>4.2.2.RELEASE</org.springframework.version>
 	</properties>
 
 	<dependencies>
@@ -22,77 +19,59 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-		
-		<dependency>
-	<groupId>log4j</groupId>
-	<artifactId>log4j</artifactId>
-	<version>1.2.17</version>
-</dependency>
 
 		<dependency>
-		  <groupId>org.springframework</groupId>
-		  <artifactId>spring-webmvc</artifactId>
-		  <version>${org.springframework.version}</version>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
 
-        <!-- Below declared dependencies are included for the servers who may complain about servlet/jstl missing dependency -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-        
-		<!--  
 		<dependency>
-		  <groupId>org.springframework</groupId>
-		  <artifactId>spring-beans</artifactId>
-		  <version>${org.springframework.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<!-- Below declared dependencies are included for the servers who may complain 
+			about servlet/jstl missing dependency -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.springframework</groupId>
-		  <artifactId>spring-context</artifactId>
-		  <version>${org.springframework.version}</version>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.springframework</groupId>
-		  <artifactId>spring-web</artifactId>
-		  <version>${org.springframework.version}</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
-		<dependency>
-		  <groupId>org.springframework</groupId>
-		  <artifactId>spring-core</artifactId>
-		  <version>${org.springframework.version}</version>
-		</dependency>
-		-->
-<!-- 
-<dependency>
-  <groupId>org.springframework</groupId>
-  <artifactId>spring-orm</artifactId>
-  <version>${org.springframework.version}</version>
-</dependency>
--->
+
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-beans</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-context</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-web</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-core</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-orm</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> -->
 	</dependencies>
 
 	<repositories>
 		<repository>
-		    <id>com.springsource.repository.bundles.release</id>
-		    <name>EBR Spring Release Repository</name>
-		    <url>http://repository.springsource.com/maven/bundles/release</url>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>EBR Spring Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
 		</repository>
 		<repository>
-		    <id>com.springsource.repository.bundles.external</id>
-		    <name>EBR External Release Repository</name>
-		    <url>http://repository.springsource.com/maven/bundles/external</url>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>EBR External Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
 	</repositories>
 
