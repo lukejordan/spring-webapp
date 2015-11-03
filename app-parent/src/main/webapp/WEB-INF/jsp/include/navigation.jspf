@@ -1,12 +1,11 @@
-This is the navigation.
-
-	<div>
-		<ul>
-			<li><a href="hello">Link 1</a></li>
-			<li><a href="home">Link 2</a></li>
-			<li><a href="login">Link 3</a></li>
-			<li><a href="cheese">Link 4</a></li>
-			<li>Link 5</li>
-		</ul>
-	</div>
-	
+<div id="primary-nav" class="nav">
+	<ul>
+		<li><a href="hello">Hello</a></li>
+		<li><a href="home">Home</a></li>
+		<li><a href="login">Login</a></li>
+		<li><a href="cheese">Cheese</a></li>
+		<li><a href="test">Test</a></li>
+		<li><a href="restTest">restTest</a></li>
+		<li><a href="service/test">service test</a></li>
+	</ul>
+</div>
