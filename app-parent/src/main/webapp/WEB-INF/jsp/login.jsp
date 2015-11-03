@@ -1,8 +1,8 @@
 <%@ include file="include/header.jspf" %>
 
-<div>
-	<h1>This is login jsp</h1>
-	<p>This is some text</p>
+<div class="main-body">
+	<h1>Login</h1>
+	<p>Please login.</p>
 </div>
 
 <%@ include file="include/footer.jspf" %>
