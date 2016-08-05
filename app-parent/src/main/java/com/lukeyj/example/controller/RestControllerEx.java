@@ -137,4 +137,26 @@ public class RestControllerEx {
 	      return response;
 	   }
 	  
+	  @RequestMapping(value = "/testPost2", method = RequestMethod.POST)
+	   public ResponseEntity testSubmit2(@RequestBody Controller controller) {
+		  
+	      LOGGER.info("test submiteed");
+	      LOGGER.info("key: " + controller.getKey());
+
+	      Person person = new Person ();
+	      
+	      person.setAge(21);
+	      person.setFirstName("First6");
+	      person.setLastName("Last6");
+
+	      Job job = new Job();
+	      job.setCompany("company2");
+	      job.setRole("role1");
+	      
+	      person.setJob(job);
+
+	      ResponseEntity response = new ResponseEntity<Person>(person, HttpStatus.NOT_FOUND);
+	      
+	      return response;
+	   }
 }
