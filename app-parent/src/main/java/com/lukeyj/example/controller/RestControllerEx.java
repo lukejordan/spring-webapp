@@ -1,4 +1,4 @@
-package com.lukeyj.example;
+package com.lukeyj.example.controller;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -16,16 +16,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lukeyj.example.Example;
 import com.lukeyj.example.data.Controller;
 import com.lukeyj.example.data.Job;
 import com.lukeyj.example.data.Person;
 
 @RestController
+@RequestMapping("/service")
 public class RestControllerEx {
 
 	private static Logger LOGGER = Logger.getLogger(Example.class.getName());
 	
-	  @RequestMapping(value = "/service/test", method = RequestMethod.GET)
+	  @RequestMapping(value = "/test", method = RequestMethod.GET)
 	   public @ResponseBody Person testService(ModelMap model) {
 		  
 	      LOGGER.info("In test service");
@@ -47,7 +49,7 @@ public class RestControllerEx {
 	      return person;
 	   }
 	  
-	  @RequestMapping(value = "/service/testMultiple", method = RequestMethod.GET)
+	  @RequestMapping(value = "/testMultiple", method = RequestMethod.GET)
 	   public @ResponseBody List testService2(ModelMap model) {
 		  
 	      LOGGER.info("In test multiple service");
@@ -58,7 +60,7 @@ public class RestControllerEx {
 	      
 	      person.setAge(21);
 	      person.setFirstName("First1");
-	      person.setLastName("Last3");
+	      person.setLastName("Last Name 34");
 
 	      Job job = new Job();
 	      job.setCompany("company2");
@@ -88,7 +90,7 @@ public class RestControllerEx {
 	      return people;
 	   }
 	  //@RequestBody
-	  @RequestMapping(value = "/service/testPost", method = RequestMethod.POST)
+	  @RequestMapping(value = "/testPost", method = RequestMethod.POST)
 	   public ResponseEntity testSubmit(@ModelAttribute Controller controller) {
 		  
 	      LOGGER.info("test submiteed");
@@ -107,10 +109,7 @@ public class RestControllerEx {
 	      job.setRole("role1");
 	      
 	      person.setJob(job);
-	      
-//
-//
-//	      
+	       
 //	      Person person2 = new Person ();
 //	      
 //	      person2.setAge(25);
