@@ -102,7 +102,7 @@ public class RestControllerEx {
 	      
 	      person.setAge(21);
 	      person.setFirstName("First1");
-	      person.setLastName("Last3");
+	      person.setLastName(controller.getKey());
 
 	      Job job = new Job();
 	      job.setCompany("company2");
