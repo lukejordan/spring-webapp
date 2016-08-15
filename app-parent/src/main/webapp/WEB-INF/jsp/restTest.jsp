@@ -29,7 +29,10 @@
 	
 	<h1>Form 2 - Angular</h1>
 	<form name="formuser" ng-submit="submit(user)" ng-controller="PostData">
-	    <input type="text" ng-model="user.key" />
+		<input type="text" ng-model="user.firstName" />
+		<input type="text" ng-model="user.lastName" />
+		<input type="text" ng-model="user.age" />
+		<input type="text" ng-model="user.job" />
 	    <button type="submit">Submit</button>
 	</form>
 	

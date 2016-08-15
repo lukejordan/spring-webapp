@@ -56,8 +56,8 @@ app.controller('PostData', ['$scope', '$http', '$log', function($scope, $http, $
 		console.log('This is some output')
 	    //$scope.submitted = true;
 		
-		var data = '{"key": "value"}'
-		data = formData
+		var data = '{"firstName": "first","lastName": "last","age": 22,"job": {"role": "role", "company": "company"}}'
+		//data = formData
 		
 		$http.post('service/testPost2', data).then(function successCallback(response) {
 			// this callback will be called asynchronously

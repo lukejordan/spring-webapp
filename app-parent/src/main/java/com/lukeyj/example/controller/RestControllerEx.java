@@ -138,22 +138,22 @@ public class RestControllerEx {
 	   }
 	  
 	  @RequestMapping(value = "/testPost2", method = RequestMethod.POST)
-	   public ResponseEntity testSubmit2(@RequestBody Controller controller) {
+	   public ResponseEntity testSubmit2(@RequestBody Person person) {
 		  
 	      LOGGER.info("test submiteed");
-	      LOGGER.info("key: " + controller.getKey());
+	      LOGGER.info("key: " + person.getFirstName());
 
-	      Person person = new Person ();
+	      Person person2 = new Person ();
 	      
-	      person.setAge(21);
-	      person.setFirstName("First6");
-	      person.setLastName(controller.getKey());
+	      person2.setAge(21);
+	      person2.setFirstName("First6");
+	      person2.setLastName("gyuguyguygy");
 
 	      Job job = new Job();
 	      job.setCompany("company2");
 	      job.setRole("role1");
 	      
-	      person.setJob(job);
+	      person2.setJob(job);
 
 	      ResponseEntity response = new ResponseEntity<Person>(person, HttpStatus.OK);
 	      
