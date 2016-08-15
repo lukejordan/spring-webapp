@@ -132,7 +132,7 @@ public class RestControllerEx {
 	      responseHeaders.setLocation(location);
 	      responseHeaders.set("MyResponseHeader", "MyValue");
 	      
-	      ResponseEntity response = new ResponseEntity<Person>(person, responseHeaders, HttpStatus.NOT_FOUND);
+	      ResponseEntity response = new ResponseEntity<Person>(person, responseHeaders, HttpStatus.OK);
 	      
 	      return response;
 	   }
@@ -147,7 +147,7 @@ public class RestControllerEx {
 	      
 	      person.setAge(21);
 	      person.setFirstName("First6");
-	      person.setLastName("Last6");
+	      person.setLastName(controller.getKey());
 
 	      Job job = new Job();
 	      job.setCompany("company2");
@@ -155,7 +155,7 @@ public class RestControllerEx {
 	      
 	      person.setJob(job);
 
-	      ResponseEntity response = new ResponseEntity<Person>(person, HttpStatus.NOT_FOUND);
+	      ResponseEntity response = new ResponseEntity<Person>(person, HttpStatus.OK);
 	      
 	      return response;
 	   }
